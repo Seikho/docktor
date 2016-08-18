@@ -23,8 +23,11 @@
     "typescript": "^2.1.0-dev.20160818"
   },
   "dependencies": {
+    "dockerode": "^2.3.0",
     "knex": "^0.11.10",
     "routist": "^0.1.1",
-    "sqlite3": "^3.1.4"
+    "sqlite3": "^3.1.4",
+    "ssh2": "^0.5.0",
+    "tunnel-ssh": "^4.1.0"
   }
 }
