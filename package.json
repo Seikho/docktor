@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -15,10 +16,11 @@
   "bugs": {
     "url": "https://github.com/seikho/docktor/issues"
   },
-  "homepage": "https://github.com/seikho/butler#readme",
+  "homepage": "https://github.com/seikho/docktor#readme",
   "devDependencies": {
+    "@types/knex": "0.0.31",
     "@types/node": "^6.0.34",
-    "typescript": "^2.1.0-dev.20160816"
+    "typescript": "^2.1.0-dev.20160818"
   },
   "dependencies": {
     "knex": "^0.11.10",
