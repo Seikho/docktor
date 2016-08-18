@@ -9,8 +9,8 @@
 - `repositoryType` string, "Github" | "Gitlab" [REQUIRED]
 - `privateKey` string [OPTIONAL]
 - `variables` string [OPTIONAL]
-- `containerMinimumUptimeMs` number [REQUIRED, DEFAULT 2000]
-- `containerMaximumRetries` number [REQUIRED, DEFAULT 3]
+- `containerMinimumUptimeMs` number [REQUIRED, DEFAULT `2000`]
+- `containerMaximumRetries` number [REQUIRED, DEFAULT `3`]
 
 ```ts
 type RepositoryType = "Github" | "Gitlab"
@@ -101,9 +101,9 @@ RESTful
 
 ### All resources
 
-`GET /resource/{id}` => Resource
-`GET /resource` => Array<Resource>
-`POST /resource` => Array<Resource>, payload: { creates: Array<Resource>, edits: Array<Resource>, deletes: Array<Resource> }
+`GET /resource/{id}` => `Resource`  
+`GET /resource` => `Array<Resource>`  
+`POST /resource` => `Array<Resource>`, payload: `{ creates: Array<Resource>, edits: Array<Resource>, deletes: Array<Resource> }`  
 
 #### Caveats
 When returning a `Resource` that contains a private key, return an empty string if it is empty or return `"********"` if it is not empty.
