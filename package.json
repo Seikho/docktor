@@ -23,7 +23,7 @@
     "typescript": "^2.1.0-dev.20160818"
   },
   "dependencies": {
-    "dockerode": "^2.3.0",
+    "dockerode-ts": "^0.2.1",
     "knex": "^0.11.10",
     "routist": "^0.1.1",
     "sqlite3": "^3.1.4",
