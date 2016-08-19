@@ -31,12 +31,14 @@ interface Source {
 `id` number [PK]
 `sourceId` number [FK]
 `tag` string [REQUIRED]
+`exposedPorts` string, JSON `Array<number>` [REQUIRED]
 
 ```ts
 interface Image {
     id: number;
     sourceId: number;
     tag: string;
+    exposePorts: string;
 }
 ```
 
@@ -66,6 +68,7 @@ interface Host {
 `hostId` number [FK]
 `name` string [REQUIRED]
 `dockerId` string [REQUIRED]
+`subdomains` string, JSON `{ [subdomain: string]: number } [REQUIRED]
 
 ```ts
 interface Container {
@@ -74,6 +77,7 @@ interface Container {
     hostId: number;
     name: string;
     dockerId: string;
+    subdomains: string;
 }
 ```
 
