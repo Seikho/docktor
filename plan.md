@@ -38,7 +38,7 @@ interface Image {
     id: number;
     sourceId: number;
     tag: string;
-    exposePorts: string;
+    exposedPorts: string;
 }
 ```
 
