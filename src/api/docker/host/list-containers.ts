@@ -1,10 +1,10 @@
 import {ContainerInfo} from 'dockerode-ts';
-import docker from '../connect';
+import getDocker from '../connect';
 
 export default async function listContainers(host: Host): Promise<Array<ContainerInfo>> {
-    const client = await docker(host);
+    const docker = await getDocker(host);
     const promise = new Promise<Array<ContainerInfo>>((resolve, reject) => {
-        client.listContainers((error, list) => {
+        docker.listContainers((error, list) => {
             if (error) return reject(error);
             resolve(list);
         })
