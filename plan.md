@@ -31,6 +31,7 @@ interface Source {
 `id` number [PK]
 `sourceId` number [FK]
 `tag` string [REQUIRED]
+`imageName` string [REQUIRED]
 `exposedPorts` string, JSON `Array<number>` [REQUIRED]
 
 ```ts

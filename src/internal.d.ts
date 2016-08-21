@@ -13,6 +13,7 @@ declare interface Source {
 
 declare interface Image {
     id: number;
+    imageName: string;
     sourceId: number;
     tag: string;
     exposedPorts: string;
