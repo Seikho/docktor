@@ -3,14 +3,14 @@
 ## Schema
 
 ### Source
-- `id` number [PK]
-- `name` string [REQUIRED]
-- `repository` string, "namespace/repository" [REQUIRED]
-- `repositoryType` string, "Github" | "Gitlab" [REQUIRED]
-- `privateKey` string [OPTIONAL]
-- `variables` string [OPTIONAL]
-- `containerMinimumUptimeMs` number [REQUIRED, DEFAULT `2000`]
-- `containerMaximumRetries` number [REQUIRED, DEFAULT `3`]
+- `id` number [PK]  
+- `name` string [REQUIRED]  
+- `repository` string, "namespace/repository" [REQUIRED]  
+- `repositoryType` string, "Github" | "Gitlab" [REQUIRED]  
+- `privateKey` string [OPTIONAL]  
+- `variables` string [OPTIONAL]  
+- `containerMinimumUptimeMs` number [REQUIRED, DEFAULT `2000`]  
+- `containerMaximumRetries` number [REQUIRED, DEFAULT `3`]  
 
 ```ts
 type RepositoryType = "Github" | "Gitlab"
@@ -28,11 +28,11 @@ interface Source {
 ```
 
 ### Image
-`id` number [PK]
-`sourceId` number [FK]
-`tag` string [REQUIRED]
-`imageName` string [REQUIRED]
-`exposedPorts` string, JSON `Array<number>` [REQUIRED]
+`id` number [PK]  
+`sourceId` number [FK]  
+`tag` string [REQUIRED]  
+`imageName` string [REQUIRED]  
+`exposedPorts` string, JSON `Array<number>` [REQUIRED]  
 
 ```ts
 interface Image {
@@ -44,13 +44,13 @@ interface Image {
 ```
 
 ### Host
-`id` number [PK]
-`name` string [OPTIONAL]
-`sshHostname` string, IP or FQDN [REQUIRED]
-`sshPort` number [REQUIRED]
-`sshUsername` string [REQUIRED]
-`sshPrivateKey` string, PASSWORD or RSA PRIVATE KEY [REQUIRED]
-`dockerPort` port [REQUIRED]
+`id` number [PK]  
+`name` string [OPTIONAL]  
+`sshHostname` string, IP or FQDN [REQUIRED]  
+`sshPort` number [REQUIRED]  
+`sshUsername` string [REQUIRED]  
+`sshPrivateKey` string, PASSWORD or RSA PRIVATE KEY [REQUIRED]  
+`dockerPort` port [REQUIRED]  
 
 ```ts
 interface Host {
@@ -64,12 +64,12 @@ interface Host {
 ```
 
 ### Container
-`id` number [PK]
-`imageId` number [FK]
-`hostId` number [FK]
-`name` string [REQUIRED]
-`dockerId` string [REQUIRED]
-`subdomains` string, JSON `{ [subdomain: string]: number } [REQUIRED]
+`id` number [PK]  
+`imageId` number [FK]  
+`hostId` number [FK]  
+`name` string [REQUIRED]  
+`dockerId` string [REQUIRED]  
+`subdomains` string, JSON `{ [subdomain: string]: number } [REQUIRED]  
 
 ```ts
 interface Container {
@@ -85,9 +85,9 @@ interface Container {
 ### Configuration
 What's a better way to store this information? The database will do... for now
 
-`dockerRegistryHostname` string [REQUIRED]
-`dockerRegistryPort` number [REQUIRED]
-`webPort`
+`dockerRegistryHostname` string [REQUIRED]  
+`dockerRegistryPort` number [REQUIRED]  
+`webPort` number [REQUIRED]
 
 ```ts
 interface Configuration {
