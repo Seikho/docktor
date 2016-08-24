@@ -23,7 +23,7 @@
     "typescript": "^2.1.0-dev.20160818"
   },
   "dependencies": {
-    "dockerode-ts": "^0.2.3",
+    "dockerode-ts": "^0.2.6",
     "find-port": "^2.0.1",
     "knex": "^0.11.10",
     "routist": "^0.1.1",
